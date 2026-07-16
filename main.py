@@ -42,3 +42,4 @@ else:
 
 accuracy = model.score(test_x, test_y)
 print("Accuracy:", accuracy)
+
