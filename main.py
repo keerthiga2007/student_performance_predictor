@@ -25,21 +25,3 @@ print("test labels")
 print(test_y)
 model.fit(train_x, train_y)
 print("model trained successfully")
-study_hours = float(input("Enter Study Hours: "))
-attendance = float(input("Enter Attendance (%): "))
-
-new_student = pd.DataFrame({
-    "StudyHours": [study_hours],
-    "Attendance": [attendance]
-})
-
-prediction = model.predict(new_student)
-
-if prediction[0] == 1:
-    print("Prediction: Pass")
-else:
-    print("Prediction: Fail")
-
-accuracy = model.score(test_x, test_y)
-print("Accuracy:", accuracy)
-
